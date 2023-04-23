@@ -75,6 +75,8 @@ getgenv().Aimbot.FOVSettings = {
     Sides = 60,
     Thickness = 1,
     Filled = false
+
+    end
 }
 
 
