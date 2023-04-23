@@ -4,7 +4,7 @@ getgenv().SecureMode = true
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 
 local Window = Rayfield:CreateWindow({
-    Name = "Psycho Hub | Wisteria 2 [ALPHA]",
+    Name = "Psycho Hub | ",
     LoadingTitle = "Psycho Hub",
     LoadingSubtitle = "by Psycho",
     ConfigurationSaving = {
@@ -19,7 +19,7 @@ local Window = Rayfield:CreateWindow({
     },
     KeySystem = true, -- Set this to true to use our key system
     KeySettings = {
-       Title = "Psycho Hub | Wisteria 2 [ALPHA]",
+       Title = "Psycho Hub | Phantom Forces",
        Subtitle = "Key System",
        Note = "Join discord (discord.gg/TMjZkjDk)",
        FileName = "Key", -- It is recommended to use something unique as other scripts using Rayfield may overwrite your key file
@@ -44,10 +44,38 @@ local Window = Rayfield:CreateWindow({
  })
 
 
- local Tab = Window:CreateTab("Main", 4483362458) -- Title, Image
- local Section = Tab:CreateSection("Main Thing")
+ local Tab = Window:CreateTab("Aimbot", 4483362458) -- Title, Image
+ local Section = Tab:CreateSection("Aimbot Settings")
 
 
+
+ getgenv().Aimbot.Settings = {
+    SendNotifications = true,
+    SaveSettings = true, -- Re-execute upon changing
+    ReloadOnTeleport = true,
+    Enabled = true,
+    TeamCheck = false,
+    AliveCheck = true,
+    WallCheck = false, -- Laggy
+    Sensitivity = 0, -- Animation length (in seconds) before fully locking onto target
+    ThirdPerson = false, -- Uses mousemoverel instead of CFrame to support locking in third person (could be choppy)
+    ThirdPersonSensitivity = 3, -- Boundary: 0.1 - 5
+    TriggerKey = "MouseButton2",
+    Toggle = false,
+    LockPart = "Head" -- Body part to lock on (Character part's name)
+}
+
+getgenv().Aimbot.FOVSettings = {
+    Enabled = true,
+    Visible = true,
+    Amount = 90,
+    Color = "255, 255, 255",
+    LockedColor = "255, 70, 70",
+    Transparency = 0.5,
+    Sides = 60,
+    Thickness = 1,
+    Filled = false
+}
 
 
 
